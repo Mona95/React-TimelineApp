@@ -6,7 +6,6 @@ export default class Header extends Component {
     super(props);
     this.state = [{ searchVisible: false }];
   }
-
   render() {
     // Classes to add to the <input /> element
     let searchInputClasses = ["searchInput"];
