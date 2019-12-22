@@ -259,12 +259,12 @@
   margin: auto;
   height: 30px;
   border-top: 1px solid #eee;
-  width: 100%;
+  width: 20%;
   border-radius: 10px;
 }
 
 .footer button {
-  background: #eee;
+  background: rgb(27, 206, 86);
   position: absolute;
   width: 100%;
   right: 0px;
@@ -272,18 +272,11 @@
   top: 0px;
   bottom: 0px;
   border: 0;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
 .footer button i {
   margin: 0 10px;
-}
-
-.header {
-  background: rgba(251, 202, 43, 1);
-}
-.header,
-.fa,
-.title,
-.searchIcon {
-  color: #333333;
+  text-align: center;
 }
