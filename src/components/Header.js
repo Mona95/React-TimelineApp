@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import SearchForm from "./SearchForm";
 
 /* Header Component */
 export default class Header extends Component {
+  state = { searchVisible: false };
+  submitForm(val) {
+    this.props.onSearch(val);
+  }
   render() {
     const wrapperStyle = {
       backgroundColor: "rgba(251, 202, 43, 1)",
@@ -24,12 +29,17 @@ export default class Header extends Component {
         <span className="title" style={titleStyle}>
           {this.props.title}
         </span>
-        <SearchForm />
+        <SearchForm
+          searchVisible={this.state.searchVisible}
+          onSubmit={this.props.onSearch}
+        />
       </div>
     );
   }
 }
-
+Header.propTypes = {
+  onSearch: PropTypes.func
+};
 Header.defaultProps = {
   title: "Github Activities"
 };
