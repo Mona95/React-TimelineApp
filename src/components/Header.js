@@ -1,18 +1,43 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 
 /* Header Component */
 export default class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = [{ searchVisible: false }];
+  }
+
   render() {
+    // Classes to add to the <input /> element
+    let searchInputClasses = ["searchInput"];
+
+    const wrapperStyle = {
+      backgroundColor: "rgba(251, 202, 43, 1)"
+    };
+    const titleStyle = {
+      color: "#111111"
+    };
+
+    // Update the class array if the state is visible
+    if (this.state.searchVisible) {
+      searchInputClasses.push("active");
+    }
+
     return (
-      <div className="header">
+      <div className="header" style={wrapperStyle}>
         <div className="menuIcon">
           <div className="dashTop" />
           <div className="dashBottom" />
           <div className="circle" />
         </div>
-        <span className="title">{this.props.title}</span>
-        <input type="text" className="searchInput" placeholder="Search ..." />
+        <span className="title" style={titleStyle}>
+          {this.props.title}
+        </span>
+        <input
+          type="text"
+          className={searchInputClasses.join(" ")}
+          placeholder="Search ..."
+        />
         <div className="fa fa-search searchIcon" />
       </div>
     );
