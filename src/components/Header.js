@@ -2,10 +2,12 @@ import React, { Component } from "react";
 
 /* Header Component */
 export default class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = [{ searchVisible: false }];
-  }
+  state = [{ searchVisible: false }];
+
+  showSearch = () => {
+    this.setState({ searchVisible: !this.state.searchVisible });
+  };
+
   render() {
     // Classes to add to the <input /> element
     let searchInputClasses = ["searchInput"];
@@ -37,7 +39,7 @@ export default class Header extends Component {
           className={searchInputClasses.join(" ")}
           placeholder="Search ..."
         />
-        <div className="fa fa-search searchIcon" />
+        <div onClick={this.showSearch} className="fa fa-search searchIcon" />
       </div>
     );
   }
