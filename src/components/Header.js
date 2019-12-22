@@ -34,6 +34,7 @@ export default class Header extends Component {
         <span className="title" style={titleStyle}>
           {this.props.title}
         </span>
+
         <input
           type="text"
           className={searchInputClasses.join(" ")}
