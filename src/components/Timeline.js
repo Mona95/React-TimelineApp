@@ -20,7 +20,7 @@ export default class Timeline extends Component {
   render() {
     const { refreshing } = this.state;
     return (
-      <div className="notificationsFrame">
+      <div>
         <div className="panel">
           <Header />
           <Content
