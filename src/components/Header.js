@@ -2,10 +2,7 @@ import React, { Component } from "react";
 
 /* Header Component */
 export default class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = [{ searchVisible: false }];
-  }
+  state = [{ searchVisible: false }];
 
   showSearch = () => {
     this.setState({ searchVisible: !this.state.searchVisible });
