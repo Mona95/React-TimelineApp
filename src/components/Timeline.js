@@ -22,7 +22,6 @@ export default class Timeline extends Component {
     return (
       <div>
         <div className="panel">
-          <Header />
           <Content
             onComponentRefresh={this.onComponentRefresh.bind(this)}
             requestRefresh={refreshing}
