@@ -1,6 +1,6 @@
 # React-TimelineComponent
 
-demo: https://optimistic-poincare-d4e566.netlify.com/
+demo: https://codesandbox.io/s/github/Mona95/React-TimelineApp
 
 Timeline Component with React
 
