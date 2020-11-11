@@ -1,4 +1,7 @@
 # React-TimelineComponent
+
+demo: https://optimistic-poincare-d4e566.netlify.com/
+
 Timeline Component with React
 
-development process for this project still continues ...
+![timeline-app](./timeline-app.png)
